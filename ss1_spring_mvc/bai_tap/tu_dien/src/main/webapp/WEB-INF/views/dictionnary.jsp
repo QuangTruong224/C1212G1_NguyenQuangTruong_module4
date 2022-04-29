@@ -12,12 +12,15 @@
 </head>
 <body>
 <form action="/translate" method="post">
+    <h3>Từ điển Anh - Việt</h3>
     <div>
         <input type="text" name="english">
     </div>
     <div>
-        <input type="submit" name="translate" >
+        <input type="submit" name="translate" value="Convert">
     </div>
 </form>
+<h3> Bản dịch : ${vietnamese}</h3>
+
 </body>
 </html>

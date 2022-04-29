@@ -25,7 +25,7 @@ public class Dictionary {
         Map<String, String> mapDictionnary = dictionnaryService.mapDictionnary();
         String result = dictionnaryService.translate(english);
         model.addAttribute("vietnamese", result);
-        return "result_final";
+        return "dictionnary";
 
     }
 }

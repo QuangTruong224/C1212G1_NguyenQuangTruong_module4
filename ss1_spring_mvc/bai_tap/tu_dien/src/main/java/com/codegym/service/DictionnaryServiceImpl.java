@@ -21,7 +21,7 @@ public class DictionnaryServiceImpl implements DictionnaryService{
         stringMap.put("Fish","cá");
         String result=stringMap.get(search);
         if (result==null) {
-            return result="Không tìm thấy";
+            return "Không tìm thấy";
         }
         return result;
     }

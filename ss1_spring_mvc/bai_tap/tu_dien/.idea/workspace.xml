@@ -5,44 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c775e10e-4083-4470-864a-0bb7ea821cd6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/src/main/java/com/codegym/controller/MoneyChange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/src/main/java/com/codegym/service/MoneyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/src/main/java/com/codegym/service/MoneyServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/src/main/webapp/WEB-INF/views/money.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chuyen_doi_tien_te/src/main/webapp/WEB-INF/views/result_final.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/Dictionary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/DictionnaryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/DictionnaryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dictionnary.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/result_final.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/.idea/thuc_hanh.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Tạo ứng dụng Spring GreetingAssignment/.idea/modules/spring_greeting.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/controller/Dictionary.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/controller/Dictionary.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/DictionnaryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/codegym/service/DictionnaryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/tu_dien-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/tu_dien-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/controller/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/Dictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/DictionnaryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/DictionnaryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dictionnary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dictionnary.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/result_final.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +186,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1651220735656</updated>
-      <workItem from="1651220737311" duration="4151000" />
+      <workItem from="1651220737311" duration="5233000" />
     </task>
     <servers />
   </component>
