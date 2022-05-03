@@ -6,10 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 @Service
 public class DictionnaryServiceImpl implements DictionnaryService{
-    @Override
-    public Map<String, String> mapDictionnary() {
-        return null;
-    }
+
 
     @Override
     public String translate(String search) {

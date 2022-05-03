@@ -22,7 +22,7 @@ public class Dictionary {
 
     @PostMapping(value = "/translate")
     public String convert(@RequestParam String english, Model model) {
-        Map<String, String> mapDictionnary = dictionnaryService.mapDictionnary();
+//        model.addAttribute("result",this.dictionnaryService.translate(english));
         String result = dictionnaryService.translate(english);
         model.addAttribute("vietnamese", result);
         return "dictionnary";
