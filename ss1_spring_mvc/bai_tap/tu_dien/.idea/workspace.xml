@@ -5,10 +5,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c775e10e-4083-4470-864a-0bb7ea821cd6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/controller/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/controller/Dictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/DictionnaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/DictionnaryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codegym/service/DictionnaryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codegym/service/DictionnaryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/.idea/modules/ung_dung_gia_vi.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/src/main/java/com/codegym/controller/SpiceController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/bai_tap/ung_dung_gia_vi/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/aopalliance-1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-aop-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-aspects-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-beans-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-context-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-context-support-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-core-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-expression-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-instrument-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-jdbc-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-jms-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-messaging-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-orm-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-oxm-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-test-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/lib/spring-tx-5.2.3.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/src/main/java/com/codegym/controller/EmailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/src/main/webapp/WEB-INF/views/success.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-maven-develop/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-maven-develop/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-maven-develop/src/main/java/com/codegym/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-maven-develop/src/main/webapp/WEB-INF/configs/spring-config-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-maven-develop/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-maven-develop/src/main/webapp/WEB-INF/views/success.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-maven-develop/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-gradle-develop/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-gradle-develop/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-mavendevelop/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-mavendevelop/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-mavendevelop/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-mavendevelop/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-mavendevelop/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-mavendevelop/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-mavendevelop/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-mavendevelop/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-mavendevelop/src/main/java/com/codegym/controller/TimeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-mavendevelop/src/main/webapp/WEB-INF/configs/spring-config-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-time-zone-mavendevelop/src/main/webapp/WEB-INF/views/worldclock.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +133,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ss2/thuc_hanh/spring-email-validate-gralde-develop" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -177,7 +242,10 @@
       <option name="presentableId" value="Default" />
       <updated>1651220735656</updated>
       <workItem from="1651220737311" duration="5233000" />
-      <workItem from="1651577432444" duration="280000" />
+      <workItem from="1651577432444" duration="574000" />
+      <workItem from="1651581214405" duration="1546000" />
+      <workItem from="1651634480474" duration="3103000" />
+      <workItem from="1651655916801" duration="22000" />
     </task>
     <servers />
   </component>
