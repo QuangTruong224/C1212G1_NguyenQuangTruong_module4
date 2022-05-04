@@ -12,7 +12,7 @@
 </head>
 <body>
 <h2>Calculator</h2>
-<form action="/did" method="post">
+<form action="/caculator" method="post">
 <table>
     <tr>
         <td colspan="2">

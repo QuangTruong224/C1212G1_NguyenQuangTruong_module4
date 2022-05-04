@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import service.ServiceCalculate;
-import service.ServiceImpl;
+import service.ServiceCalculateImpl;
 
 @Controller
 public class CaculatorController {
-    ServiceCalculate serviceCalculate = new ServiceImpl();
+    ServiceCalculate serviceCalculate=new ServiceCalculateImpl();
 //    @Autowired
 //    private ServiceCalculate serviceCalculate;
     @RequestMapping("/")
