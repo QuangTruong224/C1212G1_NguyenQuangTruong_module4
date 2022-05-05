@@ -13,18 +13,19 @@
 <body>
 <h3>${message}</h3>
 <table border="1">
-<c:forEach var="mail" items="${mailList}">
+<c:forEach var="music" items="${musicList}">
     <tr>
-        <td>Language: ${mail.language}</td>
+        <td>Tên bài hát: ${music.tenBaiHat}</td>
     </tr>
     <tr>
-        <td>Page Size: ${mail.pageSize}</td>
+        <td>Nghệ sĩ thể hiện : ${music.ngheSi}</td>
     </tr>
     <tr>
-        <td>Spam: ${mail.spamFillter}</td>
+        <td>Thể loại nhạc: ${music.theLoaiNhac}</td>
     </tr>
     <tr>
-        <td>Signature: ${mail.signatuure}</td>
+        <td><a href="<c:out value="${music.file}"/>"></a></td>
+
     </tr>
 </c:forEach>
 </table>

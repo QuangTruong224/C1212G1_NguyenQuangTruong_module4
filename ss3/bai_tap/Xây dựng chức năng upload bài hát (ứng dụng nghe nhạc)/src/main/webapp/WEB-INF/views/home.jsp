@@ -13,26 +13,31 @@
     <title>Title</title>
 </head>
 <body>
-<form:form action="/update" modelAttribute="mail">
+<form:form action="/add" modelAttribute="music">
     <fieldset>
-        <legend><h3>Settings</h3></legend>
+        <legend><h3>Add new music</h3></legend>
         <table>
             <tr>
-                <td><form:label path="language"/>Language</td>
-                <td><form:select path="language" items="${languages}"/></td>
+                <td><form:input path="tenBaiHat"/>Tên bài hát</td>
+
             </tr>
             <tr>
-                <td><form:label path="pageSize"/>Page Size:</td>
-                <td>Show <form:select path="pageSize" items="${pageSize}"/> emails per page</td>
+                <td><form:input path="ngheSi"/>Nghệ sĩ thể hiện:</td>
+
             </tr>
             <tr>
-                <td><form:label path="spamFillter"/>Spams filter</td>
-                <td><form:checkbox path="spamFillter" value="Enable spam filter"/> Enable spam filter</td>
+                <td>
+                    <form:select path="theLoaiNhac">
+                        <form:option value="US-UK">US-UK</form:option>
+                        <form:option value="Bolero">Bolero</form:option>
+                        <form:option value="Balab">Balab</form:option>
+                        <form:option value="NoMusic">Khơi lòng</form:option>
+
+                    </form:select>
+                </td>
             </tr>
             <tr>
-                <td><form:label path="signatuure"/>Signature</td>
-                <td><form:textarea path="signatuure"/></td>
-            </tr>
+                <td><form:input path="file"/>Đường dẫn</td>            </tr>
             <tr>
                 <td><input type="submit" value="Update"></td>
                 <td><input type="reset" value="Cancel"></td>

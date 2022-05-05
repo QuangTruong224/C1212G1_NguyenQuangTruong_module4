@@ -5,197 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca46bad5-89b6-4ddc-87e3-ca562512d6f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/7.1/dependencies-accessors/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/7.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/7.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/hom-thu-dien-tu-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/controller/MailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/model/Mail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/service/MailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/service/impl/MailServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/7.1/dependencies-accessors/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/7.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/7.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/src/main/java/com/model/Music.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng chức năng upload bài hát (ứng dụng nghe nhạc)/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/7.1/dependencies-accessors/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/7.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/7.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/build/libs/to-khai-y-te-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/src/main/java/com/controller/ToKhaiYTeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/src/main/java/com/model/ToKhaiYTe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/src/main/java/com/service/ToKhaiYTeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/src/main/java/com/service/impl/ToKhaiYTeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/src/main/webapp/WEB-INF/views/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/dependencies-accessors/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/build/classes/java/main/com/controller/EmployeeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/build/classes/java/main/com/model/Employee.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/build/libs/spring-mvc-form-tutorial-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/java/com/controller/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/java/com/model/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/webapp/WEB-INF/views/employee/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/webapp/WEB-INF/views/employee/info.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/dependencies-accessors/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/vcs-1/gc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/build/classes/java/main/com/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/build/classes/java/main/com/model/Login.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/build/classes/java/main/com/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/build/classes/java/main/com/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/build/libs/login-1.0-SNAPSHOT.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/build/tmp/war/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/java/com/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/java/com/model/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/java/com/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/java/com/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/webapp/WEB-INF/views/error.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/webapp/WEB-INF/views/user.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../ss2/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss2/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Xây dựng form tờ khai y tế/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/build/classes/java/main/com/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/build/classes/java/main/com/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/build/libs/spring-mvc-form-tutorial-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/build/libs/spring-mvc-form-tutorial-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/java/com/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/java/com/controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/java/com/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/java/com/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/webapp/WEB-INF/views/employee/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/webapp/WEB-INF/views/employee/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/webapp/WEB-INF/views/employee/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Form và Data Binding/src/main/webapp/WEB-INF/views/employee/info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/build/libs/login-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/build/libs/login-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/java/com/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/java/com/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/java/com/model/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/java/com/model/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/java/com/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/java/com/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/java/com/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/java/com/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/webapp/WEB-INF/views/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../thuc_hanh/Ứng dụng login/src/main/webapp/WEB-INF/views/user.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -363,6 +206,7 @@
       <updated>1651724422256</updated>
       <workItem from="1651724424507" duration="1742000" />
       <workItem from="1651732945977" duration="10034000" />
+      <workItem from="1651745461590" duration="354000" />
     </task>
     <servers />
   </component>
