@@ -1,10 +1,10 @@
-package service;
+package com.service.impl;
 
 import org.springframework.stereotype.Service;
+import com.service.CalculateService;
 
 @Service
-public class ServiceCalculateImpl implements ServiceCalculate {
-
+public class CalculateServiceImpl implements CalculateService {
     @Override
     public String calculate(Double first, Double second, String calculate) {
 

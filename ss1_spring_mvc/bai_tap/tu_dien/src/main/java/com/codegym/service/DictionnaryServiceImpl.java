@@ -7,7 +7,6 @@ import java.util.Map;
 @Service
 public class DictionnaryServiceImpl implements DictionnaryService{
 
-
     @Override
     public String translate(String search) {
         Map<String,String>  stringMap=new HashMap<>();

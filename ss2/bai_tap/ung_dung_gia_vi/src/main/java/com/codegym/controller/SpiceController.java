@@ -16,7 +16,7 @@ public class SpiceController {
     }
     @RequestMapping("/save")
     public String save(@RequestParam("condiment") String[] condiment, Model model) {
-        model.addAttribute("tenGiaVi", condiment);
+        model.addAttribute("condiment", condiment);
         return "home";
     }
 }

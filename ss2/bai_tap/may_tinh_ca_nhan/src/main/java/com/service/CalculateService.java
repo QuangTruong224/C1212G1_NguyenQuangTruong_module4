@@ -1,5 +1,5 @@
-package service;
+package com.service;
 
-public interface ServiceCalculate {
+public interface CalculateService {
     public String calculate(Double first, Double second, String calculate);
 }
