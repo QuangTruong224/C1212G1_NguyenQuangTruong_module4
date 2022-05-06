@@ -15,16 +15,16 @@
 <table border="1">
 <c:forEach var="music" items="${musicList}">
     <tr>
-        <td>Tên bài hát: ${music.tenBaiHat}</td>
+        <td>Tên bài hát: ${music.name}</td>
     </tr>
     <tr>
-        <td>Nghệ sĩ thể hiện : ${music.ngheSi}</td>
+        <td>Nghệ sĩ thể hiện : ${music.artist}</td>
     </tr>
     <tr>
-        <td>Thể loại nhạc: ${music.theLoaiNhac}</td>
+        <td>Thể loại nhạc: ${music.kindOfMusic}</td>
     </tr>
     <tr>
-        <td><a href="<c:out value="${music.file}"/>"></a></td>
+        <td><a href="${music.file}">${music.file}</a></td>
 
     </tr>
 </c:forEach>

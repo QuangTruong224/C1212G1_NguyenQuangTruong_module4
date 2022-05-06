@@ -1,43 +1,43 @@
 package com.model;
 
 public class Music {
-    private String tenBaiHat;
-    private String ngheSi;
-    private String theLoaiNhac;
+    private String name;
+    private String artist;
+    private String kindOfMusic;
     private String file;
 
     public Music() {
     }
 
     public Music(String tenBaiHat, String ngheSi, String theLoaiNhac, String file) {
-        this.tenBaiHat = tenBaiHat;
-        this.ngheSi = ngheSi;
-        this.theLoaiNhac = theLoaiNhac;
+        this.name = tenBaiHat;
+        this.artist = ngheSi;
+        this.kindOfMusic = theLoaiNhac;
         this.file = file;
     }
 
-    public String getTenBaiHat() {
-        return tenBaiHat;
+    public String getName() {
+        return name;
     }
 
-    public void setTenBaiHat(String tenBaiHat) {
-        this.tenBaiHat = tenBaiHat;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getNgheSi() {
-        return ngheSi;
+    public String getArtist() {
+        return artist;
     }
 
-    public void setNgheSi(String ngheSi) {
-        this.ngheSi = ngheSi;
+    public void setArtist(String artist) {
+        this.artist = artist;
     }
 
-    public String getTheLoaiNhac() {
-        return theLoaiNhac;
+    public String getKindOfMusic() {
+        return kindOfMusic;
     }
 
-    public void setTheLoaiNhac(String theLoaiNhac) {
-        this.theLoaiNhac = theLoaiNhac;
+    public void setKindOfMusic(String kindOfMusic) {
+        this.kindOfMusic = kindOfMusic;
     }
 
     public String getFile() {

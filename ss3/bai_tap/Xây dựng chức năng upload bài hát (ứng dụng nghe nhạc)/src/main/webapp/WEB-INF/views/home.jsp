@@ -18,16 +18,16 @@
         <legend><h3>Add new music</h3></legend>
         <table>
             <tr>
-                <td><form:input path="tenBaiHat"/>Tên bài hát</td>
+                <td><form:input path="name"/>Tên bài hát</td>
 
             </tr>
             <tr>
-                <td><form:input path="ngheSi"/>Nghệ sĩ thể hiện:</td>
+                <td><form:input path="artist"/>Nghệ sĩ thể hiện:</td>
 
             </tr>
             <tr>
                 <td>
-                    <form:select path="theLoaiNhac">
+                    <form:select path="kindOfMusic">
                         <form:option value="US-UK">US-UK</form:option>
                         <form:option value="Bolero">Bolero</form:option>
                         <form:option value="Balab">Balab</form:option>
