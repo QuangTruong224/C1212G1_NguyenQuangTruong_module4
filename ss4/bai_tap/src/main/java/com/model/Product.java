@@ -1,6 +1,12 @@
 package com.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "product_all")
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nameProduct;
     private String price;
