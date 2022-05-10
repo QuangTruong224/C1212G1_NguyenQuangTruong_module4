@@ -63,7 +63,7 @@ public class ProductRepositoryImpl implements ProductRepository {
 //            }
 //        }
 //        return productList1;
-        TypedQuery<Product> productTypedQuery = BaseRepository.entityManager.createQuery("select s from Product as s where s.nameProduct = :nameProduct", Product.class);
+        TypedQuery<Product> productTypedQuery = BaseRepository.entityManager.("select s from Product as s where s.nameProduct = :nameProduct", Product.class);
         return productTypedQuery.getResultList();
     }
 }
