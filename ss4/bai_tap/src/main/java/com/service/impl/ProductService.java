@@ -1,19 +1,17 @@
 package com.service.impl;
 
 import com.model.Product;
-import com.repository.ProductRepository;
-import com.service.ProductService;
+import com.repository.IProductRepository;
+import com.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 @Service
-public class ProductServiceImpl implements ProductService {
+public class ProductService implements IProductService {
     @Autowired
-    private ProductRepository productRepository;
+    private IProductRepository productRepository;
 
     @Override
     public List<Product> findAll() {

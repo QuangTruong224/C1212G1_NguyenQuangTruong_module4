@@ -2,15 +2,16 @@ package com.repository.impl;
 
 import com.model.Product;
 import com.repository.BaseRepository;
-import com.repository.ProductRepository;
+import com.repository.IProductRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
-public class ProductRepositoryImpl implements ProductRepository {
+public class ProductRepository implements IProductRepository {
 
     @Override
     public List<Product> findAll() {
@@ -63,7 +64,8 @@ public class ProductRepositoryImpl implements ProductRepository {
 //            }
 //        }
 //        return productList1;
-        TypedQuery<Product> productTypedQuery = BaseRepository.entityManager.("select s from Product as s where s.nameProduct = :nameProduct", Product.class);
+        TypedQuery<Product> productTypedQuery = BaseRepository.entityManager.createQuery(("select s from Product as s where s.nameProduct like : name"), Product.class);
+        productTypedQuery.setParameter("name","%"+name+"%");
         return productTypedQuery.getResultList();
     }
 }
