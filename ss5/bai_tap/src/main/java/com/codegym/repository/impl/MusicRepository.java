@@ -2,14 +2,14 @@ package com.codegym.repository.impl;
 
 import com.codegym.model.Music;
 import com.codegym.repository.BaseRepository;
-import com.codegym.repository.MusicRepository;
+import com.codegym.repository.IMusicRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityTransaction;
 import javax.persistence.TypedQuery;
 import java.util.List;
 @Repository
-public class MusicRepositoryImpl implements MusicRepository{
+public class MusicRepository implements IMusicRepository {
     @Override
     public List<Music> findAll() {
         TypedQuery<Music> musicTypedQuery = BaseRepository.entityManager.createQuery("select s from Music s", Music.class);

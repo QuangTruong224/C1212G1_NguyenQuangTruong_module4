@@ -4,7 +4,7 @@ import com.codegym.model.Music;
 
 import java.util.List;
 
-public interface MusicService {
+public interface IMusicService {
     List<Music> findAll();
 
     void  save(Music music);

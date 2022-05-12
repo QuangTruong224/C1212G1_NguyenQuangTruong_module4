@@ -1,7 +1,7 @@
 package com.codegym.controller;
 
 import com.codegym.model.Music;
-import com.codegym.service.MusicService;
+import com.codegym.service.IMusicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class MusicController {
     @Autowired
-    private MusicService musicService;
+    private IMusicService musicService;
 
     @GetMapping("/musics")
     public String list(Model model) {

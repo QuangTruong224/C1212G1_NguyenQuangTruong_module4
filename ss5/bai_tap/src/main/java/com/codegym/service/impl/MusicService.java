@@ -1,21 +1,17 @@
 package com.codegym.service.impl;
 
 import com.codegym.model.Music;
-import com.codegym.repository.BaseRepository;
-import com.codegym.repository.MusicRepository;
-import com.codegym.service.MusicService;
+import com.codegym.repository.IMusicRepository;
+import com.codegym.service.IMusicService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityTransaction;
-import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Service
-public class MusicServiceImpl implements MusicService {
+public class MusicService implements IMusicService {
     @Autowired
-    private MusicRepository musicRepository;
+    private IMusicRepository musicRepository;
 
     @Override
     public List<Music> findAll() {

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Products</h3>
+<p>
+    <a th:href="@{/product/create}">
+        Add new product
+    </a>
+</p>
+<form th:action="@{/product}" >
+    <input name="name" type="text" placeholder="Input name to search">
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<table class="table" style="text-align: center;">
+    <thead>
+    <tr>
+        <th class="col-1">No</th>
+        <th class="col-1">Name</th>
+        <th class="col-2">Price</th>
+        <th class="col-2">Description</th>
+        <th class="col-2">Brand</th>
+        <th class="col-2">Edit</th>
+        <th class="col-2">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product,loop : ${products}">
+        <td th:text="${loop.index}"></td>
+        <td><a th:href="@{/{id}/view(id=${product.getId()})}"><p th:text="${product.getName()}"></p></a></td>
+        <td th:text="${product.getPrice()}"></td>
+        <td th:text="${product.getDescription()}"></td>
+        <td th:text="${product.getBrand()}"></td>
+        <th class="col-1"><a th:href="@{/product/update(id=${product.getId()})}"><button class="btn btn-info">Edit</button></a></td>
+        <th class="col-1"><a th:href="@{/product/delete(id=${product.getId()})}"><button class="btn btn-danger">Delete</button></a></td>
+    </tr>
+    </tbody>
+</table>
+<div class="row">
+    <div class="col-lg-12">
+        <a th:if="${products.hasPrevious()}"
+           th:href="@{/product(page=${products.number - 1}, name=${nameVal})}">
+            Previous
+        </a>
+        <span th:text="${products.number + 1}"></span>
+        /
+        <span th:text="${products.totalPages}"></span>
+        <a th:if="${products.hasNext()}"
+           th:href="@{/product(page=${products.number + 1}, name=${nameVal})}">
+            Next
+        </a>
+    </div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

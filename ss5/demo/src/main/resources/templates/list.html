@@ -1,27 +1,63 @@
 <!DOCTYPE html>
-<html  xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="/layout :: head">
     <!--    <meta charset="UTF-8">-->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>Blog app</title>
 </head>
 <body>
+<header>
+    <div class="px-3 py-2 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <svg class="bi me-2" width="30" height="20" role="img" aria-label="Bootstrap">
+                        <use xlink:href="#bootstrap"/>
+                    </svg>
+                </a>
 
-<p style="height: 40px;color: cyan;text-align: center;font-size: 27px">
-    <a th:href="@{/create}">
-        Add new Blog
-    </a>
-</p>
-<form th:action="@{/search}"   method="post">
-    <div>
-        <input type="text" name="name" placeholder="Enter name">
-        <button type="submit">Search by content</button>
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <li>
+                        <a th:href="@{/create}" href="#" class="nav-link text-white">
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                <use xlink:href="#home"/>
+                            </svg>
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                <use xlink:href="#people-circle"/>
+                            </svg>
+                            Content
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-</form>
+    <div class="px-3 py-2 border-bottom mb-3">
+        <div class="container d-flex flex-wrap justify-content-center">
+            <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" th:action="@{/search}" method="post">
+                <input type="search" class="form-control" name="name" placeholder="Search..." aria-label="Search">
+            </form>
+
+        </div>
+    </div>
+</header>
+
+
+<!--<form th:action="@{/search}"   method="post">-->
+<!--    <div>-->
+<!--        <input type="text" name="name" placeholder="Enter name">-->
+<!--        <button type="submit">Search by content</button>-->
+<!--    </div>-->
+<!--</form>-->
 <h2 th:text="${messages}" style="color: green"></h2>
 
 <h2>Music</h2>
-<table id = "blogs">
+<table id="blogs">
     <thead>
     <tr>
         <th>Number</th>
@@ -35,7 +71,7 @@
     <tbody>
     <tr th:each="blog : ${blogs}">
         <td th:text="${blog.id}"></td>
-<!--        <td th:text="${blog.nameBlog}"></td>-->
+        <!--        <td th:text="${blog.nameBlog}"></td>-->
         <td><a class="btn btn-info" th:href="${blog.nameBlog}">Blog</a></td>
         <td th:text="${blog.content}"></td>
         <td th:text="${blog.category.categoryName}"></td>
@@ -58,6 +94,22 @@
     </tr>
     </tbody>
 </table>
+
+<div class="row">
+    <div class="col-lg-12">
+        <a th:if="${blogs.hasPrevious()}"
+           th:href="@{/blog(page=${blogs.number - 1})}">
+            Previous
+        </a>
+        <span th:text="${blogs.number + 1}"></span>
+        /
+        <span th:text="${blogs.totalPages}"></span>
+        <a th:if="${blogs.hasNext()}"
+           th:href="@{/blog(page=${blogs.number + 1})}">
+            Next
+        </a>
+    </div>
+
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
      aria-labelledby="exampleModalCenterTitle"
      aria-hidden="true">
@@ -83,16 +135,18 @@
             </div>
         </div>
     </div>
+
+
+
+    </div>
 </div>
 <script>
-    function deleteModal(id,name) {
+    function deleteModal(id, name) {
         document.getElementById("id-del").value = id;
-        document.getElementById("name").innerText=name;
+        document.getElementById("name").innerText = name;
     }
 </script>
-</tr>
-</tbody>
-</table>
+
 <footer th:replace="/layout :: footer"></footer>
 </body>
 </html>
