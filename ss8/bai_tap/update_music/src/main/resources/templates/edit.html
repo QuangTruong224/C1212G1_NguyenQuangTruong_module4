@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<h3>Edit music</h3>
+
+<p>
+    <a th:href="@{/musics}">
+        Back to music list
+    </a>
+</p>
+<div>
+
+    <form th:action="@{/update}" th:object="${musicDto}" method="post" >
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Name music</label>
+            <input type="text" th:field="*{name}"/>
+            <p style="color: red"  th:errors="*{name}">
+            </p>
+
+        </div>
+        <!--        <p style="color: seagreen" th:if="${#fields.hasErrors('name')}"&ndash;&gt;-->
+        <!--                        th:errors="*{}">-->
+        <div>
+            <label>Artist</label>
+            <input type="text" th:field="*{artist}"/>
+            <p style="color: red"  th:errors="*{artist}">
+
+            </p>
+        </div>
+        <div>
+            <label>Kind Of Music</label>
+            <input type="text" th:field="*{kindOfMusic}"/>
+            <p style="color: red"  th:errors="*{kindOfMusic}">
+
+            </p>
+        </div>
+
+        <div>
+            <label>File</label>
+            <input type="text" th:field="*{file}"/>
+        </div>
+
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>

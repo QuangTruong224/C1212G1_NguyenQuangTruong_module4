@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+    <!--    <meta charset="UTF-8">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Blog app</title>
+</head>
+<body>
+<header>
+    <div class="px-3 py-2 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                    <svg class="bi me-2" width="30" height="20" role="img" aria-label="Bootstrap">
+                        <use xlink:href="#bootstrap"/>
+                    </svg>
+                </a>
+
+                <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                    <li>
+                        <a th:href="@{/create}" href="#" class="nav-link text-white">
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                <use xlink:href="#home"/>
+                            </svg>
+                            MUSIC
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link text-white">
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                <use xlink:href="#people-circle"/>
+                            </svg>
+                            KIND OF FILE
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="px-3 py-2 border-bottom mb-3">
+        <div class="container d-flex flex-wrap justify-content-center">
+            <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" th:action="@{/search}" method="post">
+                <input type="search" class="form-control" name="name" placeholder="Search..." aria-label="Search">
+            </form>
+
+        </div>
+    </div>
+</header>
+
+
+<!--<form th:action="@{/search}"   method="post">-->
+<!--    <div>-->
+<!--        <input type="text" name="name" placeholder="Enter name">-->
+<!--        <button type="submit">Search by content</button>-->
+<!--    </div>-->
+<!--</form>-->
+<h2 th:text="${messages}" style="color: green"></h2>
+
+<h2>Music</h2>
+<table id="blogs">
+    <thead>
+    <tr>
+        <th>Number</th>
+        <th>Name music</th>
+        <th>Artist</th>
+        <th>Kind of music</th>
+        <th>file</th>
+        <th>Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="music : ${musicDto}">
+        <td th:text="${music.id}"></td>
+        <td th:text="${music.name}">
+        <td th:text="${music.artist}"></td>
+        <td th:text="${music.kindOfMusic}"></td>
+        <td><a class="btn btn-info" th:href="${music.file}">link</a></td>
+        <td>
+            <a type="button" class="btn btn-primary" th:href="@{/{id}/edit(id=${music.id})}">edit</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+<script>
+    function deleteModal(id, name) {
+        document.getElementById("id-del").value = id;
+        document.getElementById("name").innerText = name;
+    }
+</script>
+
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
+
+

@@ -25,13 +25,6 @@ public class Music {
         this.file = file;
     }
 
-    public Music(String name, String artist, String kindOfMusic, String file) {
-        this.name = name;
-        this.artist = artist;
-        this.kindOfMusic = kindOfMusic;
-        this.file = file;
-    }
-
     public int getId() {
         return id;
     }

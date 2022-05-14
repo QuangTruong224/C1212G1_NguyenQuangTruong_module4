@@ -9,22 +9,28 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-public class MusicDto implements Validator {
+public class MusicDto {
+
     private int id;
     @NotEmpty(message = "Không được phép để trống")
-    @Size(max = 800)
-    @Pattern(regexp = "^[a-zA-Z]+$")
+    @Size(max = 800,message = "Không vượt quá 800 ký tự")
+    @Pattern(regexp = "^([\\w]*[\\s]*[\\w]*)+$",message = "Không chứa các kí tự đặc biệt như @ ; , . = - + , ….")
     private String name;
 
     @NotEmpty(message = "Không được phép để trống")
-    @Size(max = 300)
-    @Pattern(regexp = "^[a-zA-Z]+$")
+    @Size(max = 300 ,message = "Không vượt quá 300 ký tự"  )
+    @Pattern(regexp = "^([\\w]*[\\s]*[\\w]*)+$",message = "Không chứa các kí tự đặc biệt như @ ; , . = - + , ….")
     private String artist;
+
+    @NotEmpty(message = "Không được phép để trống")
+    @Size(max = 1000 ,message = "Không vượt quá 1000 ký tự"  )
+    @Pattern(regexp = "^([\\w]*[\\s]*[\\w]*[,]*)+$",message = "Kí hiệu chỉ là dấu phẩy")
     private String kindOfMusic;
     private String file;
 
     public MusicDto() {
     }
+
 
     public MusicDto(int id, String name, String artist, String kindOfMusic, String file) {
         this.id = id;
@@ -74,13 +80,5 @@ public class MusicDto implements Validator {
         this.file = file;
     }
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return false;
-    }
 
-    @Override
-    public void validate(Object target, Errors errors) {
-
-    }
 }

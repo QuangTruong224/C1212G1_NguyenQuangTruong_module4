@@ -21,7 +21,6 @@ public class ProductController {
     @Autowired
     private IProductService iProductService;
 
-    //hiển thị, tìm kiếm
     @GetMapping()
     public String index(@PageableDefault(value = 2, sort = {}) Pageable pageable,
                         @RequestParam Optional<String> name, Model model){
@@ -32,7 +31,7 @@ public class ProductController {
         return "list";
     }
 
-    //thêm mới
+
     @GetMapping("/create")
     public String create(Model model){
         model.addAttribute("product", new Product());
@@ -46,7 +45,6 @@ public class ProductController {
     }
 
 
-    //chỉnh sửa
     @GetMapping("/update")
     public String edit(@RequestParam int id, Model model) {
         model.addAttribute("product", iProductService.findById(id));
@@ -59,7 +57,7 @@ public class ProductController {
         return "redirect:/product";
     }
 
-    //xóa
+
     @GetMapping("/delete")
     public String delete(@RequestParam int id, RedirectAttributes redirect) {
         iProductService.delete(id);

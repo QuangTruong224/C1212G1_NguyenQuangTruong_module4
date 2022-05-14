@@ -14,7 +14,7 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 @Entity
-public class UserDto implements Validator {
+public class UserDto  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
@@ -96,13 +96,4 @@ public class UserDto implements Validator {
         this.email = email;
     }
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return false;
-    }
-
-    @Override
-    public void validate(Object target, Errors errors) {
-
-    }
 }
