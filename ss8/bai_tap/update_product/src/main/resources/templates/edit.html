@@ -2,35 +2,56 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="/layout :: head"></head>
 <body>
-<h3>Edit product</h3>
-<p>
-    <a th:href="@{/product}">
-        Back to product list
-    </a>
-</p>
-<div>
-    <form th:action="@{/product/update}" th:object="${productDto}"
-          method="POST" novalidate="novalidate">
-        <input type="hidden" th:field="*{id}"/>
-        <div>
-            <label>Name</label>
-            <input type="text" th:field="*{name}"/>
-        </div>
-        <div>
-            <label>Price</label>
-            <input type="email" th:field="*{price}"/>
-        </div>
-        <div>
-            <label>Description</label>
-            <input type="text" th:field="*{description}"/>
-        </div>
-        <div>
-            <label>Brand</label>
-            <input type="text" th:field="*{brand}"/>
-        </div>
-        <input type="submit" value="Edit"/>
-    </form>
-</div>
+    <div align="center">
+        <h3>Edit product</h3>
+        <p>
+            <a th:href="@{/product}">
+                Back to product list
+            </a>
+        </p>
+    </div>
+
+    <div id="form" align="center" class="table">>
+        <form th:action="@{/product/update}" th:object="${productDto}"
+              method="post">
+            <input type="hidden" th:field="*{id}"/>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td>
+                        <input type="text" th:field="*{name}"/>
+                        <p style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>
+                        <input type="number" th:field="*{price}"/>
+                        <p style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>
+                        <input type="text" th:field="*{description}"/>
+                        <p style="color: red" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Brand</th>
+                    <td>
+                        <input type="text" th:field="*{brand}"/>
+                        <p style="color: red" th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input class="btn btn-primary" type="submit" value="Save"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 <footer th:replace="/layout :: footer"></footer>
 </body>
 </html>

@@ -1,10 +1,10 @@
-package com.codegym.update_product;
+package com.codegym;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UpdateProductApplicationTests {
+class ProductManagerApplicationTests {
 
     @Test
     void contextLoads() {

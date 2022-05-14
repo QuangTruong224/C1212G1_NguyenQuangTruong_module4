@@ -1,10 +1,10 @@
-package com.codegym.update_product.service;
+package com.codegym.service;
 
-import com.codegym.update_product.model.Product;
+
+import com.codegym.model.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import java.util.List;
 
 public interface IProductService {
     void save(Product product);

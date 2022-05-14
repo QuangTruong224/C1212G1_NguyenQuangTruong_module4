@@ -1,13 +1,13 @@
-package com.codegym.update_product;
+package com.codegym;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class UpdateProductApplication {
+public class ProductManagerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(UpdateProductApplication.class, args);
+        SpringApplication.run(ProductManagerApplication.class, args);
     }
 
 }

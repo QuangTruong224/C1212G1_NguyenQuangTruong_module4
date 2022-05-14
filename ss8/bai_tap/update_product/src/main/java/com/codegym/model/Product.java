@@ -1,31 +1,22 @@
-package com.codegym.update_product.dto;
+package com.codegym.model;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.persistence.*;
 
-public class ProductDto {
+@Entity
+@Table
+public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer id;
-
-    @NotEmpty(message = "Không được phép để trống")
-    @Size(max = 300,message = "Không vượt quá 800 ký tự")
-    @Pattern(regexp = "^([\\w]*[\\s]*[\\w]*)+$",message = "Không chứa các kí tự đặc biệt như @ ; , . = - + , ….")
     String name;
-
-    @Min(value = 1, message = "must larger than 0")
     Double price;
-
-    @NotEmpty(message = "Không được phép để trống")
-    @Size(max = 1000 ,message = "Không vượt quá 300 ký tự"  )
-    @Pattern(regexp = "^([\\w]*[\\s]*[\\w]*)+$",message = "Không chứa các kí tự đặc biệt như @ ; , . = - + , ….")
     String description;
     String brand;
 
-    public ProductDto() {
+    public Product() {
     }
 
-    public ProductDto(Integer id, String name, Double price, String description, String brand) {
+    public Product(Integer id, String name, Double price, String description, String brand) {
         this.id = id;
         this.name = name;
         this.price = price;

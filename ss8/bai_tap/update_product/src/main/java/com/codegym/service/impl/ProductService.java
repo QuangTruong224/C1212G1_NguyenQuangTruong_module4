@@ -1,8 +1,9 @@
-package com.codegym.update_product.service.impl;
+package com.codegym.service.impl;
 
-import com.codegym.update_product.model.Product;
-import com.codegym.update_product.repository.ProductRepository;
-import com.codegym.update_product.service.IProductService;
+
+import com.codegym.model.Product;
+import com.codegym.repository.IProductRepository;
+import com.codegym.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,29 +14,26 @@ import java.util.List;
 @Service
 public class ProductService implements IProductService {
     @Autowired
-    private ProductRepository productRepository;
-
+    private IProductRepository iProductRepository;
 
 
     @Override
     public void save(Product product) {
-        productRepository.save(product);
+        this.iProductRepository.save(product);
     }
 
     @Override
     public Product findById(Integer id) {
-        return productRepository.findById(id).orElse(null);
+        return this.iProductRepository.findById(id).orElse(null);
     }
 
     @Override
     public void delete(Integer id) {
-productRepository.deleteById(id);
+        this.iProductRepository.deleteById(id);
     }
-
 
     @Override
     public Page<Product> findByName(String name, Pageable pageable) {
-        return productRepository.findByTitle(name, pageable);
+        return iProductRepository.findByTitle("%"+name+"%", pageable);
     }
-
 }
