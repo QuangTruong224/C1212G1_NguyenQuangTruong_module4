@@ -30,11 +30,11 @@ public class ProductController {
     public String goHome(Model model, @PageableDefault(value = 2, sort = {}) Pageable pageable,
                          @RequestParam("sort") Optional<String> sort,
                          @RequestParam Optional<String> name) {
-        String searchKeyWord = name.orElse("");
+        String searchName = name.orElse("");
         String sortAsc = sort.orElse("");
         model.addAttribute("sort", sortAsc);
-        model.addAttribute("products", this.iProductService.findAllAndSearch(searchKeyWord, pageable));
-        model.addAttribute("search", searchKeyWord);
+        model.addAttribute("products", this.iProductService.findAllAndSearch(searchName, pageable));
+        model.addAttribute("search", searchName);
         return "list";
     }
     @GetMapping("/add/{id}")

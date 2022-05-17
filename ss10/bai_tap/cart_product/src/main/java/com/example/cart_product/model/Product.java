@@ -11,7 +11,7 @@ public class Product {
     private String name;
     private String image;
     private String discription;
-    @Column(columnDefinition = "DOUBLE")
+    @Column(columnDefinition = "double")
     private Integer price;
 
     public Product() {

@@ -10,6 +10,6 @@ import java.awt.print.Pageable;
 
 @Repository
 public interface IProductRepository extends JpaRepository<Product,Integer> {
-    Page<Product> findAllByNameContaining(String searchKeyWord, Pageable pageable);
+    Page<Product> findAllByNameContaining(String searchName, Pageable pageable);
 
 }
