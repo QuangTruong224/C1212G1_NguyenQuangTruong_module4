@@ -19,14 +19,14 @@ import java.util.Optional;
 
 
 @Controller
-@RequestMapping("/product")
+//@RequestMapping("/product")
 public class ProductController {
 
     @Autowired
     private IProductService iProductService;
 
 
-    @GetMapping()
+    @GetMapping("/product")
     public String index(@PageableDefault(value = 2, sort = {}) Pageable pageable,
                         @RequestParam Optional<String> name, Model model){
         String nameVal = name.orElse("");
@@ -86,9 +86,8 @@ public class ProductController {
 
     @GetMapping("/delete")
     public String delete(@RequestParam Integer id, RedirectAttributes redirect) {
-        Product product = this.iProductService.findById(id);
         iProductService.delete(id);
-        redirect.addFlashAttribute("message", "Removed product successfully!");
+        redirect.addFlashAttribute("message", "Xóa sản phẩm thành công!");
         return "redirect:/product";
     }
 

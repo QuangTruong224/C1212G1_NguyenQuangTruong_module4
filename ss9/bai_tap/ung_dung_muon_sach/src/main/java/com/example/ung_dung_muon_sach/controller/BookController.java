@@ -1,5 +1,6 @@
 package com.example.ung_dung_muon_sach.controller;
 
+import com.example.ung_dung_muon_sach.exception.InvalidException;
 import com.example.ung_dung_muon_sach.model.Book;
 import com.example.ung_dung_muon_sach.model.Borrow;
 import com.example.ung_dung_muon_sach.service.BookServcie;
@@ -13,9 +14,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
-
 @Controller
-@RequestMapping({"/book",""})
+@RequestMapping({"/book", ""})
 public class BookController {
     @Autowired
     private BookServcie bookServcie;
@@ -51,18 +51,19 @@ public class BookController {
         if (book != null) {
             if (book.getQuantity() > 0) {
                 model.addAttribute("book", book);
-                model.addAttribute("code",randomBorrowedNumber());
+                model.addAttribute("code", randomBorrowedNumber());
                 return "book/borrow";
             } else {
                 throw new NumberFormatException("");
             }
-        } return "redirect:/";
+        }
+        return "redirect:/";
     }
 
     @PostMapping("/borrow")
-    public String update(Book book,Model model,@RequestParam(name = "code")int code, Pageable pageable) {
-        book.setQuantity(book.getQuantity()-1);
-        Borrow borrow = new Borrow(code,book);
+    public String update(Book book, Model model, @RequestParam(name = "code") int code, Pageable pageable) {
+        book.setQuantity(book.getQuantity() - 1);
+        Borrow borrow = new Borrow(code, book);
         borrowService.save(borrow);
 
         bookServcie.save(book);
@@ -78,9 +79,9 @@ public class BookController {
 
     @PostMapping("/return")
     public String delete(Book book, @RequestParam int ssBook, Model model, Pageable pageable, RedirectAttributes redirectAttributes) {
-        book.setQuantity(book.getQuantity()+1);
+        book.setQuantity(book.getQuantity() + 1);
         borrowService.removeBySsBook(ssBook);
-        redirectAttributes.addFlashAttribute("message","Bạn đã xóa thành công sách");
+        redirectAttributes.addFlashAttribute("message", "Bạn đã xóa thành công sách");
         return "redirect:/";
     }
 
@@ -89,15 +90,27 @@ public class BookController {
         model.addAttribute("blog", bookServcie.findById(id));
         return "/book/view";
     }
-    private String randomBorrowedNumber(){
+
+    private String randomBorrowedNumber() {
         String result = "";
-        for (int i = 0;i<5;i++){
-            result +=randomNumber();
+        for (int i = 0; i < 5; i++) {
+            result += randomNumber();
         }
         return result;
     }
-    private int randomNumber(){
-        int number = (int) Math.round(Math.random()*9);
+
+    private int randomNumber() {
+        int number = (int) Math.round(Math.random() * 9);
         return number;
+    }
+
+    @ExceptionHandler(InvalidException.class)
+    public String invalidCode() {
+        return "invalidCode";
+    }
+
+    @ExceptionHandler(OutOfMemoryError.class)
+    public String quanlityError() {
+        return "quanlityError";
     }
 }
