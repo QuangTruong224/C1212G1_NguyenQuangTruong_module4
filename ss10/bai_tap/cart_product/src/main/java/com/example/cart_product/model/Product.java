@@ -9,9 +9,12 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+
+    @Column(columnDefinition = "TEXT")
     private String image;
+
     private String discription;
-    @Column(columnDefinition = "double")
+    @Column(columnDefinition = "TEXT")
     private Integer price;
 
     public Product() {

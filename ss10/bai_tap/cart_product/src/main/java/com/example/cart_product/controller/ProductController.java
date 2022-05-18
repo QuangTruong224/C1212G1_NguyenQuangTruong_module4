@@ -6,12 +6,12 @@ import com.example.cart_product.model.Product;
 import com.example.cart_product.service.IProductService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.print.Pageable;
 import java.util.Optional;
 
 @SessionAttributes("cart")
@@ -27,7 +27,7 @@ public class ProductController {
 
 
     @GetMapping(value = {"/shop", ""})
-    public String goHome(Model model, @PageableDefault(value = 2, sort = {}) Pageable pageable,
+    public String goHome(Model model, @PageableDefault(value = 2) Pageable pageable,
                          @RequestParam("sort") Optional<String> sort,
                          @RequestParam Optional<String> name) {
         String searchName = name.orElse("");
