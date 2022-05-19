@@ -14,4 +14,13 @@ public class CartController {
         model.addAttribute("cart", cartDto);
         return "cart";
     }
+    @GetMapping("/form")
+    public String showForm() {
+        return "form";
+    }
+
+    @GetMapping("/error")
+    public String error() {
+        return "error";
+    }
 }
