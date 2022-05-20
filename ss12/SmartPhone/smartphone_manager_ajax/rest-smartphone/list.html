@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Font Awesome -->
+     <link
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+     rel="stylesheet"
+     />
+     <!-- Google Fonts -->
+     <link
+     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+     rel="stylesheet"
+     />
+     <!-- MDB -->
+     <link
+     href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.css"
+     rel="stylesheet"
+     />
+     <!-- MDB -->
+     <script
+     type="text/javascript"
+     src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.11.0/mdb.min.js"
+     ></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Document</title>
+
+    <script>
+        $('document').ready(function () {
+            showList();
+            $('#btn-create').click(function () {
+                let producer = $('#producer').val();
+                let model = $('#model').val();
+                let price = $('#price').val();
+                let smartPhoneObj = {
+                    producer: producer,
+                    model: model,
+                    price: price
+                }
+                console.log(smartPhoneObj);
+                $.ajax({
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    type: "POST", //GET, DELETE, PUT...
+                    url: "http://localhost:8080/smartphones/create" ,
+                    data: JSON.stringify(smartPhoneObj),
+                    success: function(resultSuccess){
+                        $('#msg').text('Create successfully!')
+                        $('#createModal').modal('hide');
+                        showList();
+                    },
+                    error: function(resultError) {
+                        let modelError = "";
+                        let producerError = "";
+                        if (resultError.responseJSON.errorMap.model) {
+                            modelError = resultError.responseJSON.errorMap.model
+                        }
+                        if (resultError.responseJSON.errorMap.producer) {
+                            producerError = resultError.responseJSON.errorMap.producer
+                        }
+                        $('#modelError').text(modelError);
+                        $('#producerError').text(producerError);
+                    }
+                });
+            })
+
+        });
+
+        function showList() {
+            $.ajax({
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                type: "GET", //GET, DELETE, PUT...
+                url: "http://localhost:8080/smartphones/list",
+                success: function(resultSuccess){
+                    let smartphoneList = resultSuccess;
+                    let outHTML = `
+                        <tr>
+                            <th>#</th>
+                            <th>Producer</th>
+                            <th>Model</th>
+                            <th>Price</th>
+                            <th colspan="2">Actions</th>
+                        </tr>
+                    `;
+
+                    for (let i = 0; i < smartphoneList.length; i++) {
+                        outHTML += `
+                        <tr>
+                            <td>${i + 1}</td>
+                            <td>${smartphoneList[i].producer}</td>
+                            <td>${smartphoneList[i].model}</td>
+                            <td>${smartphoneList[i].price}</td>
+                            <td ><a href="update.html?id=${smartphoneList[i].id}">Update</a></td>
+                            <td >
+                                <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal" onclick="sendId(${smartphoneList[i].id})">Delete</button>
+                            </td>
+                        </tr>
+                        `;
+                    }
+                    $("#bodySmartphone").html(outHTML);
+                },
+                error: function(resultError) {
+                    alert("He thong dang bao tri");
+                }
+            });
+        }
+
+        function sendId(id) {
+            $('#confirm').click(function (e) {
+                $.ajax({
+                    headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                    },
+                    type: "DELETE", //GET, DELETE, PUT...
+                    url: "http://localhost:8080/smartphones/" + id,
+                    success: function(resultSuccess){
+                        $('#msg').text('Delete successfully!')
+                        $('#exampleModal').modal('hide');
+                        showList();
+                    },
+                    error: function(resultError) {
+                        alert("He thong dang bao tri");
+                    }
+                }) 
+            })
+        }
+
+    </script>
+</head>
+<body>
+    <button type="button" class="btn btn-primary btn-rounded" data-mdb-toggle="modal" data-mdb-target="#createModal">Create new Smartphone</button>
+    <table class="table">
+        <thead class="table-dark"></thead>
+        <tbody id="bodySmartphone">           
+        </tbody>
+      </table>
+
+    <p id="msg"></p>
+
+<!-- Create Modal -->
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Create new Smartphone</h5>
+        </div>
+        <form>
+            <div class="container">
+                <!-- Name input -->
+                <div class="mb-4">
+                <label class="form-label" for="form4Example1">Model</label>
+                <input type="text" id="model" class="form-control" />
+                <small id="modelError" style="color: red;"></small>
+                </div>
+            
+                <!-- Message input -->
+                <div class="mb-4">
+                <label class="form-label" for="form4Example2">Price</label>
+                <input type="text" class="form-control" id="price">
+                </div>
+
+                <!-- Message input -->
+                <div class="mb-4">
+                    <label class="form-label" for="form4Example3">Producer</label>
+                    <input type="text" class="form-control" id="producer">
+                    <small id="producerError" style="color: red;"></small>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="btn-create">Create</button>
+            </div>
+        
+        </form>
+      </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">...</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal" id="btnClose">Close</button>
+          <button type="button" class="btn btn-primary" id="confirm">Delete</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+</body>
+</html>

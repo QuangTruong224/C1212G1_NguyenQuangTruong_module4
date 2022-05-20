@@ -14,9 +14,6 @@ import java.util.List;
 public interface IAppBlogRepository extends JpaRepository<AppBlog, Integer>, PagingAndSortingRepository<AppBlog,Integer> {
 
 
-    @Query(value = "select * from app_blog where content like :name", nativeQuery = true)
-    List<AppBlog> searchByContent(@Param("name") String name);
-
-    Page<AppBlog> findAll(Pageable pageable);
+    Page<AppBlog> findByContentContaining(String searchName, Pageable pageable);
 
 }

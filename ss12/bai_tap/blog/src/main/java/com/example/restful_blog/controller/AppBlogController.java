@@ -24,10 +24,10 @@ public class AppBlogController {
 
     @GetMapping("/blog")
     public String list(Model model,
-                       @PageableDefault(value = 2, sort = {}) Pageable pageable) {
+                       @PageableDefault(value = 2, sort = {}) Pageable pageable, @RequestParam(defaultValue = "") String searchName) {
 //        String keywordVal = keyword.orElse("");
 //        Page<AppBlog>appBlogs= iAppBlogService.findAll(pageable);
-        model.addAttribute("blogs",this.iAppBlogService.findAllBy(pageable));
+        model.addAttribute("blogs",this.iAppBlogService.findAllAndSearch(searchName,pageable));
 //        model.addAttribute("blogs", this.iAppBlogService.findAll());
 
 //        model.addAttribute("keywordVal", keywordVal);
@@ -65,12 +65,12 @@ public class AppBlogController {
         return "/edit";
     }
 
-    @PostMapping("/search")
-    public String search(@RequestParam("name") String name, Model model) {
-        model.addAttribute("blogs", iAppBlogService.searchByContent(name));
-
-        return "/list";
-    }
+//    @PostMapping("/search")
+//    public String search(@RequestParam("name") String name, Model model) {
+//        model.addAttribute("blogs", iAppBlogService.searchByContent(name));
+//
+//        return "/list";
+//    }
     @PostMapping("/update")
     public String update(@ModelAttribute AppBlog appBlog, RedirectAttributes redirectAttributes) {
         this.iAppBlogService.update(appBlog);

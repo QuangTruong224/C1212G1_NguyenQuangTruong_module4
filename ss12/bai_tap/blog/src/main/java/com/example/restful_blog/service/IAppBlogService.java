@@ -9,13 +9,14 @@ import java.util.List;
 public interface IAppBlogService {
     List<AppBlog> findAll();
 
-    AppBlog  save(AppBlog appBlog);
+    AppBlog save(AppBlog appBlog);
 
     AppBlog findById(int id);
 
-    void update( AppBlog appBlog);
-    void remove(int id);
-    List<AppBlog> searchByContent(String name);
-    Page<AppBlog> findAllBy(Pageable pageable);
+    void update(AppBlog appBlog);
 
+    void remove(int id);
+
+    //    List<AppBlog> searchByContent(String name);
+    Page<AppBlog> findAllAndSearch(String searchName, Pageable pageable);
 }

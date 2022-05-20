@@ -43,13 +43,8 @@ public class AppBlogService implements IAppBlogService {
     }
 
     @Override
-    public List<AppBlog> searchByContent(String name) {
-        return this.iAppBlogRepository.searchByContent("%"+name+"%");
-    }
-
-    @Override
-    public Page<AppBlog> findAllBy(Pageable pageable) {
-        return this.iAppBlogRepository.findAll(pageable);
+    public Page<AppBlog> findAllAndSearch(String searchName, Pageable pageable) {
+        return this.iAppBlogRepository.findByContentContaining(searchName,pageable);
     }
 
 

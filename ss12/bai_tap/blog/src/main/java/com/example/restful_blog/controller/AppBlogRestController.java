@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
@@ -30,9 +31,9 @@ public class AppBlogRestController {
     private IAppBlogService iAppBlogService;
 
     @GetMapping("/list")
-    public ResponseEntity<Page<AppBlog>> getPageBlog(@PageableDefault(value = 2) Pageable pageable) {
-        Page<AppBlog> appBlogs = this.iAppBlogService.findAllBy(pageable);
-        if (!appBlogs.hasContent()) {
+    public ResponseEntity<Page<AppBlog>> getPageBlog( @PageableDefault(value = 10) Pageable pageable, @RequestParam(defaultValue = "") String searchName) {
+        Page<AppBlog> appBlogs = this.iAppBlogService.findAllAndSearch(searchName,pageable);
+        if (appBlogs.isEmpty()) {
 
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -46,6 +47,7 @@ public class AppBlogRestController {
         if (bindingResult.hasFieldErrors()) {
             return new ResponseEntity<>(bindingResult.getFieldErrors(), HttpStatus.BAD_REQUEST);
         }
+
         AppBlog appBlog = new AppBlog();
         BeanUtils.copyProperties(blogDTO, appBlog);
         this.iAppBlogService.save(appBlog);
@@ -90,5 +92,9 @@ public class AppBlogRestController {
         this.iAppBlogService.remove(id);
         return new ResponseEntity<>(optionalAppBlog.get(), HttpStatus.OK);
     }
+//    @GetMapping(value = "/search")
+//    public ResponseEntity<List<AppBlog>> searchByContent(@RequestParam String name){
+//        return new ResponseEntity<>(iAppBlogService.searchByContent(name), HttpStatus.OK);
+//    }
 
 }
