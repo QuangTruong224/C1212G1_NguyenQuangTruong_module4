@@ -13,11 +13,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-6 ">
-            <a class="btn btn-success" th:href="@{/employee/create}">Add new employee</a>
+            <a class="btn btn-success" th:href="@{/service/create}">Add new service</a>
         </div>
         <div class="col-6 ">
-            <form th:action="@{/employee/searchByName}" method="post">
-                <input class="form-control-sm" type="text" name="search" id="search">
+            <form th:action="@{/service/searchByName}" method="post">
+                <input class="form-control-sm" type="text" name="search" idService="search">
                 <button class="btn btn-success" type="submit">Search Name</button>
             </form>
         </div>
@@ -36,42 +36,47 @@
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Name</th>
-            <th scope="col">Birthday</th>
-            <th scope="col">Card</th>
-            <th scope="col">Salary</th>
-            <th scope="col">Number Phone</th>
-            <th scope="col">Gmail</th>
-            <th scope="col">Address</th>
-            <th scope="col">Division</th>
-            <th scope="col">EducationDegree</th>
-            <th scope="col">Position</th>
+            <th scope="col">Area</th>
+            <th scope="col">Cost</th>
+            <th scope="col">Max people</th>
+            <th scope="col">Room standard </th>
+            <th scope="col">Discription</th>
+            <th scope="col">Area pool</th>
+            <th scope="col">Number floors</th>
+            <th scope="col">Type rent</th>
+            <th scope="col">Type service</th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
         </tr>
         </thead>
         <tbody>
-        <th:block th:each="employee : ${employees}">
+        <th:block th:each="service : ${services}">
             <tr>
-                <td th:text="${employee.id}"></td>
-                <td th:text="${employee.name}"></td>
-                <td th:text="${employee.birthday}"></td>
-                <td th:text="${employee.idCard}"></td>
-                <td th:text="${employee.salary}"></td>
-                <td th:text="${employee.phone}"></td>
-                <td th:text="${employee.email}"></td>
-                <td th:text="${employee.address}"></td>
+                <td th:text="${service.idService}"></td>
+                <td th:text="${service.nameService}"></td>
+                <td th:text="${service.areaService}"></td>
+<!--                <td>-->
+<!--                    <p th:if="${customer.gender == true}" th:text="Nam"></p>-->
+<!--                    <p th:if="${customer.gender == false}" th:text="Nữ"></p>-->
+<!--                </td>-->
+                <td th:text="${service.costService}"></td>
+                <td th:text="${service.maxPeopleService}"></td>
+                <td th:text="${service.standardRoom}"></td>
+                <td th:text="${service.discriptionOtherConvenience}"></td>
+                <td th:text="${service.poolArea}"></td>
+                <td th:text="${service.numberOfFloors}"></td>
 
-                <td th:text="${employee.division.name}"></td>
-                <td th:text="${employee.educationDegree.name}"></td>
-                <td th:text="${employee.position.name}"></td>
+
+                <td th:text="${service.rentType.rentTypeName}"></td>
+                <td th:text="${service.serviceType.serviceTypeName}"></td>
                 <td>
-                    <button class="btn btn-warning"><a th:href="@{/employee/edit/{id}(id=${employee.id})}">Edit</a>
+                    <button class="btn btn-warning"><a th:href="@{/service/edit/{id}(id=${service.idService})}">Edit</a>
                     </button>
                 </td>
                 <td>
-                    <button onclick="deleteEmployee(this)" th:id="${employee.id}"
+                    <button onclick="deleteService(this)" th:id="${service.idService}"
                             type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"
-                            th:value="${employee.name}">
+                            th:value="${service.nameService}">
                         Delete
                     </button>
                 </td>
@@ -85,24 +90,24 @@
         <div class="mx-auto" style="width: 200px">
             <ul class="pagination">
                 <li class="page-item">
-                    <a class="page-link" th:href="@{'/employee/list'(page=${employees.number - 1})}"
-                       th:if="${employees.hasPrevious()}">Previous</a>
+                    <a class="page-link" th:href="@{'/service/list'(page=${services.number - 1})}"
+                       th:if="${services.hasPrevious()}">Previous</a>
                 </li>
 
-                <li class="page-item"><a class="page-link" th:href="@{'/employee/list'(page=${employees.number - 1})}"
-                                         th:if="${employees.hasPrevious()}" th:text="${employees.number}"></a>
+                <li class="page-item"><a class="page-link" th:href="@{'/service/list'(page=${services.number - 1})}"
+                                         th:if="${services.hasPrevious()}" th:text="${services.number}"></a>
                 </li>
 
                 <li class="page-item active">
-                    <a class="page-link" th:href="@{'/employee/list'(page=${employees.number})}"
-                       th:text="${employees.number+1}">2 <span class="sr-only">(current)</span></a>
+                    <a class="page-link" th:href="@{'/service/list'(page=${services.number})}"
+                       th:text="${services.number+1}">2 <span class="sr-only">(current)</span></a>
                 </li>
 
-                <li class="page-item"><a class="page-link" th:href="@{'/employee/list'(page=${employees.number+1})}"
-                                         th:if="${employees.hasNext()}" th:text="${employees.number+2}"></a></li>
+                <li class="page-item"><a class="page-link" th:href="@{'/service/list'(page=${services.number+1})}"
+                                         th:if="${services.hasNext()}" th:text="${services.number+2}"></a></li>
                 <li class="page-item">
-                    <a class="page-link" th:href="@{'/employee/list'(page=${employees.number + 1})}"
-                       th:if="${employees.hasNext()}">Next</a>
+                    <a class="page-link" th:href="@{'/customer/list'(page=${services.number + 1})}"
+                       th:if="${services.hasNext()}">Next</a>
                 </li>
             </ul>
 
@@ -123,7 +128,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                Are you sure delete <span class="text-danger" id="name-employee"></span> ?
+                Are you sure delete <span class="text-danger" id="name-service"></span> ?
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
@@ -134,15 +139,15 @@
 </div>
 
 
-<form hidden id="form-delete" method="post" th:action="@{/employee/delete}">
+<form hidden id="form-delete" method="post" th:action="@{/service/delete}">
     <input type="text" name="action" value="delete">
-    <input type="text" name="id" id="id-employee">
+    <input type="text" name="id" id="id-service">
 </form>
 
 <script>
-    function deleteEmployee(target) {
-        document.getElementById("id-employee").value = target.id;
-        document.getElementById("name-employee").innerText = target.value;
+    function deleteService(target) {
+        document.getElementById("id-service").value = target.id;
+        document.getElementById("name-service").innerText = target.value;
 
     }
 
@@ -157,7 +162,7 @@
 
 <script>
     $(document).ready(function () {
-        $('#employee_table').DataTable();
+        $('#customer_table').DataTable();
     });
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

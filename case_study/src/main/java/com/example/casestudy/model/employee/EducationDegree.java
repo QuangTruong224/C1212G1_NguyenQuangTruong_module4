@@ -4,29 +4,30 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "education_degree")
+@Table(name = "educationDegree")
 public class EducationDegree {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
+
     private String name;
-    @OneToMany(mappedBy = "educationDegree", cascade = CascadeType.ALL)
-    private Set<Employee> employees;
 
     public EducationDegree() {
     }
 
-    public EducationDegree(Integer id, String name, Set<Employee> employees) {
+    public EducationDegree(int id, String name) {
         this.id = id;
         this.name = name;
-        this.employees = employees;
     }
 
-    public Integer getId() {
+    @OneToMany(mappedBy = "educationDegree",cascade = CascadeType.ALL)
+    private Set<Employee> employees;
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

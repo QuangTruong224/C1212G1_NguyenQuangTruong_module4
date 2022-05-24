@@ -8,25 +8,26 @@ import java.util.Set;
 public class Position {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
+
     private String name;
-    @OneToMany(mappedBy = "position",cascade = CascadeType.ALL)
-    private Set<Employee> employees;
 
     public Position() {
     }
 
-    public Position(Integer id, String name, Set<Employee> employees) {
+    public Position(int id, String name) {
         this.id = id;
         this.name = name;
-        this.employees = employees;
     }
 
-    public Integer getId() {
+    @OneToMany(mappedBy = "position",cascade = CascadeType.ALL)
+    private Set<Employee> employees;
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

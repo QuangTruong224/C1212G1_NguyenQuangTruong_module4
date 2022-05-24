@@ -1,17 +1,11 @@
 package com.example.casestudy.controller.employee;
 
-import com.example.casestudy.dto.CustomerDto;
 import com.example.casestudy.dto.EmployeeDto;
-import com.example.casestudy.model.customer.Customer;
-import com.example.casestudy.model.customer.CustomerType;
 import com.example.casestudy.model.employee.Division;
 import com.example.casestudy.model.employee.EducationDegree;
 import com.example.casestudy.model.employee.Employee;
 import com.example.casestudy.model.employee.Position;
-import com.example.casestudy.service.employee.IDivisionService;
-import com.example.casestudy.service.employee.IEducationDegreeService;
-import com.example.casestudy.service.employee.IEmployeeService;
-import com.example.casestudy.service.employee.IPositionService;
+import com.example.casestudy.service.employee.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -24,12 +18,15 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 import javax.validation.Valid;
 
+
+@RequestMapping("/employee")
 @Controller
-@RequestMapping("employee")
 public class EmployeeController {
+    @Autowired
+    private IEmployeeService employeeService;
+
     @Autowired
     private IDivisionService divisionService;
 
@@ -37,13 +34,18 @@ public class EmployeeController {
     private IEducationDegreeService educationDegreeService;
 
     @Autowired
-    private IEmployeeService employeeService;
-
-    @Autowired
     private IPositionService positionService;
 
+
+
+    @GetMapping("/employee")
+    public String home() {
+        return "home";
+    }
+
+
     @GetMapping("/list")
-    public ModelAndView listEmployee(@PageableDefault(value = 3, sort = "id", direction = Sort.Direction.ASC) org.springframework.data.domain.Pageable pageable) {
+    public ModelAndView listCustomers(@PageableDefault(value = 3, sort = "id", direction = Sort.Direction.ASC) Pageable pageable) {
         Page<Employee> employees = employeeService.findAll(pageable);
         ModelAndView modelAndView = new ModelAndView("employee/list");
         modelAndView.addObject("employees", employees);
@@ -53,6 +55,7 @@ public class EmployeeController {
     @RequestMapping("/searchByName")
     public ModelAndView searchByName(@RequestParam(name = "search") String name, @PageableDefault(value = 2,
             sort = "id", direction = Sort.Direction.DESC) Pageable pageable) {
+
         ModelAndView modelAndView = new ModelAndView("employee/list", "employees", employeeService.findByName(name, pageable));
         return modelAndView;
     }
@@ -61,47 +64,51 @@ public class EmployeeController {
     public ModelAndView showCreateForm(Pageable pageable) {
         ModelAndView modelAndView = new ModelAndView("employee/create");
         Page<Division> divisions = divisionService.findAll(pageable);
-        Page<EducationDegree> educationDegrees = educationDegreeService.findAll(pageable);
         Page<Position> positions = positionService.findAll(pageable);
-        modelAndView.addObject("divisions", divisions);
-        modelAndView.addObject("educationDegrees", educationDegrees);
-        modelAndView.addObject("positions", positions);
+        Page<EducationDegree> educationDegrees = educationDegreeService.findAll(pageable);
+        modelAndView.addObject("divisions",divisions);
+        modelAndView.addObject("positions",positions);
+        modelAndView.addObject("educationDegrees",educationDegrees);
+
         modelAndView.addObject("employeeDto", new EmployeeDto());
         return modelAndView;
     }
 
     @PostMapping("/create")
-    public String saveCustomer(@Valid @ModelAttribute EmployeeDto employeeDto, BindingResult bindingResult, @PageableDefault(value = 5, sort = "id",
+    public String saveEmployee(@Valid @ModelAttribute EmployeeDto employeeDto, BindingResult bindingResult, @PageableDefault(value = 5, sort = "id",
             direction = Sort.Direction.ASC) Pageable pageable, Model model, RedirectAttributes redirectAttributes) {
         if (bindingResult.hasFieldErrors()) {
             Page<Division> divisions = divisionService.findAll(pageable);
-            Page<EducationDegree> educationDegrees = educationDegreeService.findAll(pageable);
             Page<Position> positions = positionService.findAll(pageable);
-            model.addAttribute("divisions", divisions);
-            model.addAttribute("educationDegrees", educationDegrees);
-            model.addAttribute("positions", positions);
+            Page<EducationDegree> educationDegrees = educationDegreeService.findAll(pageable);
+
+            model.addAttribute("divisions",divisions);
+            model.addAttribute("positions",positions);
+            model.addAttribute("educationDegrees",educationDegrees);
             return "employee/create";
         } else {
             Employee employee = new Employee();
             BeanUtils.copyProperties(employeeDto, employee);
             employeeService.save(employee);
-            redirectAttributes.addFlashAttribute("message", "New customer created successfully");
+            redirectAttributes.addFlashAttribute("message", "New employee created successfully");
             return "redirect:/employee/list";
         }
+
     }
+
 
     @GetMapping("/edit/{id}")
     public ModelAndView showEditForm(@PathVariable int id, Pageable pageable) {
 //        Optional<Customer> customer = customerService.findById(id);
-        if (employeeService.findById(id) != null) {
+        if (employeeService.findById(id)!=null) {
             ModelAndView modelAndView = new ModelAndView("employee/edit");
             Page<Division> divisions = divisionService.findAll(pageable);
-            Page<EducationDegree> educationDegrees = educationDegreeService.findAll(pageable);
             Page<Position> positions = positionService.findAll(pageable);
-            modelAndView.addObject("employee", employeeService.findById(id));
-            modelAndView.addObject("divisions", divisions);
-            modelAndView.addObject("educationDegrees", educationDegrees);
-            modelAndView.addObject("positions", positions);
+            Page<EducationDegree> educationDegrees = educationDegreeService.findAll(pageable);
+            modelAndView.addObject("divisions",divisions);
+            modelAndView.addObject("positions",positions);
+            modelAndView.addObject("educationDegrees",educationDegrees);
+            modelAndView.addObject("employee",employeeService.findById(id));
 
             return modelAndView;
         } else {
@@ -111,20 +118,21 @@ public class EmployeeController {
     }
 
     @PostMapping("/edit")
-    public String updateEmployee(@ModelAttribute("employee") Employee employee, Pageable pageable, Model model, RedirectAttributes redirectAttributes) {
+    public String updateCustomer(@ModelAttribute("customer") Employee employee, Pageable pageable, Model model, RedirectAttributes redirectAttributes) {
         employeeService.save(employee);
         Page<Employee> employees = employeeService.findAll(pageable);
         model.addAttribute("employees", employees);
-        redirectAttributes.addFlashAttribute("message", "New customer edited successfully");
+        redirectAttributes.addFlashAttribute("message", "New employee edited successfully");
         return "redirect:/employee/list";
     }
 
+
     @PostMapping("/delete")
-    public String deleteEmployee(@RequestParam(name = "id") int id, @PageableDefault(value = 2, sort = "id", direction = Sort.Direction.ASC) Pageable pageable, Model model) {
+    public String deleteCustomer(@RequestParam(name = "id") int id, @PageableDefault(value = 2, sort = "id", direction = Sort.Direction.ASC) Pageable pageable, Model model) {
         employeeService.remove(id);
         Page<Employee> employees = employeeService.findAll(pageable);
         model.addAttribute("employees", employees);
-        model.addAttribute("message", "Employee updated successfully");
+        model.addAttribute("message", "Customer updated successfully");
         return "redirect:/employee/list";
     }
 }

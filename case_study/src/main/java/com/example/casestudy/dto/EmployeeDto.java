@@ -1,3 +1,4 @@
+
 package com.example.casestudy.dto;
 
 import com.example.casestudy.model.employee.Division;
@@ -5,10 +6,12 @@ import com.example.casestudy.model.employee.EducationDegree;
 import com.example.casestudy.model.employee.Position;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 public class EmployeeDto {
+
     private Integer id;
 
     @NotBlank(message = "Mời nhập vào, không để khoảng trắng")
@@ -20,7 +23,7 @@ public class EmployeeDto {
     @NotBlank(message = "Mời nhập vào, không để khoảng trắng")
     private String idCard;
 
-    @NotBlank(message = "Mời nhập vào, không để khoảng trắng")
+    @Min(value = 1, message = "Số tiền phải lớn hơn 0")
     private Double salary;
 
     @NotBlank(message = "Mời nhập vào, không để khoảng trắng")

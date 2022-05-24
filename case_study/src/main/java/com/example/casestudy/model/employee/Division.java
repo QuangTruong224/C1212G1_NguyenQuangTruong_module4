@@ -1,5 +1,6 @@
 package com.example.casestudy.model.employee;
 
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -8,24 +9,27 @@ import java.util.Set;
 public class Division {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int id;
+
     private String name;
 
-    @OneToMany(mappedBy = "division",cascade = CascadeType.ALL)
-    private Set<Employee> employees;
+    public Division(int id, String name, Set<Employee> employees) {
+        this.id = id;
+        this.name = name;
+        this.employees = employees;
+    }
+
     public Division() {
     }
 
-    public Division(Integer id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+    @OneToMany(mappedBy = "division",cascade = CascadeType.ALL)
+    private Set<Employee> employees;
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -21,6 +21,7 @@ public class CustomerDto {
     private Boolean gender;
 
     @NotBlank(message = "Mời nhập vào, không để khoảng trắng")
+    @Pattern(regexp = "^d{9}$",message = "Số CMND phải đúng định dạng 9 số")
     private String idCard;
 
     @NotBlank(message = "Mời nhập vào, không để khoảng trắng")

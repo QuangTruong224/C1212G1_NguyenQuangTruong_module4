@@ -48,7 +48,7 @@ public class CustomerController {
     }
 
     @GetMapping("/create")
-    public ModelAndView showCreateForm(org.springframework.data.domain.Pageable pageable) {
+    public ModelAndView showCreateForm(Pageable pageable) {
         ModelAndView modelAndView = new ModelAndView("customer/create");
         Page<CustomerType> customerTypes = customerTypeService.findAll(pageable);
         modelAndView.addObject("customerTypes", customerTypes);
@@ -59,7 +59,7 @@ public class CustomerController {
 
     @PostMapping("/create")
     public String saveCustomer(@Valid @ModelAttribute CustomerDto customerDto, BindingResult bindingResult, @PageableDefault(value = 5, sort = "id",
-            direction = Sort.Direction.ASC) org.springframework.data.domain.Pageable pageable, Model model, RedirectAttributes redirectAttributes) {
+            direction = Sort.Direction.ASC) Pageable pageable, Model model, RedirectAttributes redirectAttributes) {
         if (bindingResult.hasFieldErrors()) {
             Page<CustomerType> customerTypes = customerTypeService.findAll(pageable);
             model.addAttribute("customerTypes", customerTypes);
