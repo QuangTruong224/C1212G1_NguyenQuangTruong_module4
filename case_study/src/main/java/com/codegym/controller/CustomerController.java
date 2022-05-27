@@ -12,6 +12,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -28,7 +29,7 @@ public class CustomerController {
     private ICustomerTypeService iCustomerTypeService;
 
     @GetMapping({"/list","/"})
-    public String getCustomerList(Model model, @PageableDefault(value = 5) Pageable pageable,
+    public String getCustomerList(Model model, @PageableDefault(value = 2) Pageable pageable,
                            @RequestParam Optional<String> name, @RequestParam Optional<String> email,
                                   @RequestParam Optional<String> type) {
         String nameVal = name.orElse("");
@@ -62,14 +63,30 @@ public class CustomerController {
                                 BindingResult bindingResult,
                                 RedirectAttributes redirectAttributes,
                                 Model model){
-        new CustomerDto().validate(customerDto,bindingResult);
+
+
+//        new CustomerDto().validate(customerDto,bindingResult);
+
+
+
+//        Check du lieu ton tai
+        if (iCustomerService.existByEmai(customerDto.getEmail())) {
+            FieldError fieldError=new FieldError("customerDto","email","Email da ton tai");
+            bindingResult.addError(fieldError);
+        }
+
+
         if (bindingResult.hasFieldErrors()){
             model.addAttribute("customerType", this.iCustomerTypeService.findAll());
             return "customer/create";
         } else {
             Customer customer=new Customer();
             BeanUtils.copyProperties(customerDto,customer);
-            customer.setCustomerCode("KH-"+getString());
+
+//            random
+            customer.setCustomerCode("KH-"+ randomCode());
+
+
             this.iCustomerService.save(customer);
         }
         redirectAttributes.addFlashAttribute("message", "Creation successful");
@@ -113,7 +130,12 @@ public class CustomerController {
         return "redirect:/customer/list";
     }
 
-    public String getString(){
+
+
+
+
+//    ma khach hang random
+    public String randomCode(){
         String result ="";
         for (int i=0; i<4; i++){
             result+=getRandomNumber();

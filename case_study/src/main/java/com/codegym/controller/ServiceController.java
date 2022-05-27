@@ -75,6 +75,16 @@ public class ServiceController {
         return "redirect:/service/list";
     }
 
+    @GetMapping(value = "/booking")
+    public String booking(Model model){
+        model.addAttribute("booking",this.iServiceService.findBooking());
+        return "/service/booking";
+    }
+
+
+
+
+
     public String getString(){
         String result ="";
         for (int i=0; i<4; i++){

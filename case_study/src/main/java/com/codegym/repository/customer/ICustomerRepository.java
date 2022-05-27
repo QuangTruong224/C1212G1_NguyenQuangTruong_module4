@@ -12,4 +12,9 @@ public interface ICustomerRepository extends JpaRepository<Customer, Integer> {
 
     Page<Customer> findAllByStatusAndCustomerNameContainingAndEmailContaining(int i,String name, String email, Pageable pageable);
     Page<Customer> findAllByStatusAndCustomerNameContainingAndEmailContainingAndCustomerType_Id(int i,String name, String email,int type, Pageable pageable);
+
+//de kiem tra du lieu ton tai
+    Boolean existsByEmail(String email);
+
 }
+

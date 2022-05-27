@@ -24,43 +24,27 @@ public class Customer {
     @ManyToOne
     @JoinColumn(name = "type_id", referencedColumnName = "id")
     private CustomerType customerType;
-    @OneToMany(mappedBy = "customer")
-    private List<Contract> contractList;
+
+
+//    @OneToMany(mappedBy = "customer")
+//    private List<Contract> contractList;
     private int status;
 
     public Customer() {
     }
 
-    public String getCustomerCode() {
-        return customerCode;
-    }
-
-    public void setCustomerCode(String customerCode) {
+    public Customer(int customerId, String customerCode, String customerName, String birthDay, int gender, String idCard, String phone, String email, String address, CustomerType customerType, int status) {
+        CustomerId = customerId;
         this.customerCode = customerCode;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
-    public List<Contract> getContractList() {
-        return contractList;
-    }
-
-    public void setContractList(List<Contract> contractList) {
-        this.contractList = contractList;
-    }
-
-    public CustomerType getCustomerType() {
-        return customerType;
-    }
-
-    public void setCustomerType(CustomerType customerType) {
+        this.customerName = customerName;
+        this.birthDay = birthDay;
+        this.gender = gender;
+        this.idCard = idCard;
+        this.phone = phone;
+        this.email = email;
+        this.address = address;
         this.customerType = customerType;
+        this.status = status;
     }
 
     public int getCustomerId() {
@@ -69,6 +53,14 @@ public class Customer {
 
     public void setCustomerId(int customerId) {
         CustomerId = customerId;
+    }
+
+    public String getCustomerCode() {
+        return customerCode;
+    }
+
+    public void setCustomerCode(String customerCode) {
+        this.customerCode = customerCode;
     }
 
     public String getCustomerName() {
@@ -125,5 +117,21 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public CustomerType getCustomerType() {
+        return customerType;
+    }
+
+    public void setCustomerType(CustomerType customerType) {
+        this.customerType = customerType;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }

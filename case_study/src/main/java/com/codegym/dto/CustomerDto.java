@@ -7,7 +7,7 @@ import org.springframework.validation.Validator;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Pattern;
 
-public class CustomerDto implements Validator {
+public class CustomerDto  {
     private int CustomerId;
     private String customerCode;
     @Pattern(regexp = "^([A-Za-zÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚÝàáâãèéêìíòóôõùúýĂăĐđĨĩŨũƠơƯưẠ-ỹ]+\\s{0,}){1,}$", message = "Not null or number in name")
@@ -106,14 +106,14 @@ public class CustomerDto implements Validator {
         this.customerType = customerType;
     }
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return false;
-    }
-
-    @Override
-    public void validate(Object target, Errors errors) {
-        CustomerDto customerDto = (CustomerDto) target;
-
-    }
+//    @Override
+//    public boolean supports(Class<?> clazz) {
+//        return false;
+//    }
+//
+//    @Override
+//    public void validate(Object target, Errors errors) {
+//        CustomerDto customerDto = (CustomerDto) target;
+//
+//    }
 }

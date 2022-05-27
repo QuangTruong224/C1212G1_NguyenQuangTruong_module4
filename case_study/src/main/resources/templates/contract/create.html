@@ -19,31 +19,31 @@
         <div class="col-lg-6">
             <form action="" th:object="${contractDto}" method="post">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Start Day</label>
+                    <label >Start Day</label>
                     <input type="date" th:field="*{startDay}" class="form-control"
                            aria-describedby="emailHelp" placeholder="Enter Start Day">
                     <p style="color: red" th:if="${#fields.hasErrors('startDay')}" th:errors="*{startDay}"></p>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">End Day</label>
+                    <label >End Day</label>
                     <input type="date" th:field="*{endDay}" class="form-control"
                            aria-describedby="emailHelp" placeholder="Enter End Day">
                     <p style="color: red" th:if="${#fields.hasErrors('endDay')}" th:errors="*{endDay}"></p>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Deposit</label>
+                    <label >Deposit</label>
                     <input type="number" th:field="*{deposit}" class="form-control"
                            aria-describedby="emailHelp" placeholder="Enter Deposit">
                     <p style="color: red" th:if="${#fields.hasErrors('deposit')}" th:errors="*{deposit}"></p>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Total Money</label>
+                    <label >Total Money</label>
                     <input type="text" th:field="*{totalMoney}" class="form-control"
                            aria-describedby="emailHelp" placeholder="Enter Total Money">
                     <p style="color: red" th:if="${#fields.hasErrors('totalMoney')}" th:errors="*{totalMoney}"></p>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Customer</label>
+                    <label>Customer</label>
                     <select class="form-select" aria-label="Default select example" th:field="*{customer}">
                         <option th:each="type:${customerList}"
                                 th:value="${type.customerId}"
@@ -52,7 +52,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Employee</label>
+                    <label>Employee</label>
                     <select class="form-select" aria-label="Default select example" th:field="*{employee}">
                         <option th:each="type:${employeeList}"
                                 th:value="${type.employeeId}"

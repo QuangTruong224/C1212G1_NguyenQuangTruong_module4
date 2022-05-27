@@ -33,7 +33,7 @@ public class Contract {
     @JoinColumn(name = "serviceId", referencedColumnName = "serviceId")
     private Service service;
 
-    @OneToMany (mappedBy = "contract")
+    @OneToMany (mappedBy = "contract",cascade = CascadeType.ALL)
     private List<ContractDetail> contractDetailList;
     @Column(columnDefinition = "bit default 0")
     private int status;

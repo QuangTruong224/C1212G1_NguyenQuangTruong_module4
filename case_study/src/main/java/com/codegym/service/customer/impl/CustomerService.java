@@ -65,4 +65,9 @@ public class CustomerService implements ICustomerService {
     public Page<Customer> find2(int i, String nameVal, String emailVal, String typeVal, Pageable pageable) {
         return this.iCustomerRepository.findAllByStatusAndCustomerNameContainingAndEmailContainingAndCustomerType_Id(0,nameVal,emailVal, Integer.parseInt(typeVal),pageable);
     }
+
+    @Override
+    public Boolean existByEmai(String email) {
+        return this.iCustomerRepository.existsByEmail(email);
+    }
 }

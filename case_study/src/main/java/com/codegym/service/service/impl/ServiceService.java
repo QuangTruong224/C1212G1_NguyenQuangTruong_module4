@@ -1,5 +1,6 @@
 package com.codegym.service.service.impl;
 
+import com.codegym.dto.Booking;
 import com.codegym.repository.service.IServiceRepository;
 import com.codegym.service.service.IServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +33,11 @@ public class ServiceService implements IServiceService {
     @Override
     public void deleteById(int serviceId) {
         this.iServiceRepository.deleteById(serviceId);
+    }
+
+    @Override
+    public List<Booking> findBooking() {
+        return this.iServiceRepository.findBooking();
     }
 
 }

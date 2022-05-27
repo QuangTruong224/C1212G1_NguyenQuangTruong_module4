@@ -1,5 +1,6 @@
 package com.codegym.service.service;
 
+import com.codegym.dto.Booking;
 import com.codegym.model.service.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,4 +15,5 @@ public interface IServiceService {
     List<Service> findAll();
 
     void deleteById(int serviceId);
+    List<Booking> findBooking();
 }
